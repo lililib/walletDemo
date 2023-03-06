@@ -1,10 +1,7 @@
-package com.bigdata.base.common.utils;
+package com.wallet.wallet2demo.common.mybatis_plus;
 
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.bigdata.base.form.PageForm;
-import com.google.common.base.CaseFormat;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -39,9 +36,9 @@ public class PageUtils {
         if(pageSize>100){
             pageSize = 100;
         }
-        if(StringUtils.isNotBlank(sort)) {
+        if(sort!=null) {
             Sort.Direction d;
-            if(StringUtils.isBlank(order)) {
+            if(order!=null) {
                 d = Sort.Direction.DESC;
             } else {
                 d = Sort.Direction.valueOf(order.toUpperCase());
@@ -76,11 +73,10 @@ public class PageUtils {
         if(pageSize>1000){
             pageSize = 1000;
         }
-        if(StringUtils.isNotBlank(sort)) {
+        if(sort!=null) {
            //***驼峰转下划线
-           sort =  CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE,sort);
             Boolean isAsc = false;
-            if(StringUtils.isBlank(order)) {
+            if(order!=null) {
                 isAsc = false;
             } else {
                 if("desc".equals(order.toLowerCase())){

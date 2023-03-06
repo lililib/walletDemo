@@ -1,4 +1,4 @@
-package com.wallet.wallet2demo.aop;
+package com.wallet.wallet2demo.common.aop;
 
 
 import java.lang.annotation.ElementType;

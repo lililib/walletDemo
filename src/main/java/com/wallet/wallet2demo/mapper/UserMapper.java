@@ -1,2 +1,9 @@
-package com.wallet.wallet2demo.mapper;public class UserMapper {
+package com.wallet.wallet2demo.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wallet.wallet2demo.domain.User;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface UserMapper extends BaseMapper<User> {
 }

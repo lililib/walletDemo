@@ -1,4 +1,4 @@
-package com.wallet.wallet2demo.common;
+package com.wallet.wallet2demo.common.mybatis_plus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
